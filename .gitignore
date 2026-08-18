@@ -1,11 +1,37 @@
+# Logs
+*.log
+
+# Virtual environment
 .venv/
+
+# Cache and compiled files
 __pycache__/
 *.py[cod]
+*$py.class
+
+# Test and type checking caches
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-.ipynb_checkpoints/
+
+# Jupyter checkpoints
+.ipynb56>
+
+# Environment file
 .env
+
+# macOS specific
 .DS_Store
+
+# Data directories
 data/raw/
 data/processed/
+
+# Distribution and build files
+*.egg-info/
+dist/
+build/
+
+# Image files
+*.png
+

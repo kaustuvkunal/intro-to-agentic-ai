@@ -1,13 +1,16 @@
 [project]
 name = "intro-to-agentic-ai"
 version = "0.1.0"
-description = "Add your description here"
+description = "Repo of Agentic AI use cases"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "chromadb>=1.5.9",
     "crewai>=0.95.0",
+    "fastmcp>=3.4.7",
     "langchain>=1.3.15",
+    "langchain-experimental>=0.4.2",
+    "langchain-openai>=1.5.1",
     "langgraph>=1.2.11",
     "litellm>=1.97.0",
     "openai>=2.54.0",
@@ -30,3 +33,19 @@ dev = [
     "pytest-asyncio>=1.4.0",
     "ruff>=0.16.3",
 ]
+
+
+# ── Pytest
+[tool.pytest.ini_options]
+#  "src" is importable because the project root (".") is on sys.path
+pythonpath = ["."]
+
+#  Only collect tests from the tests/ directory
+testpaths = ["tests"]
+
+#  Do NOT auto-collect classes that merely start with "Test"
+#  (fixes the TestCase / TestCaseList / TestGenerationState warnings)
+python_classes = []
+
+#  Keep the default function-prefix
+python_functions = ["test_*"]
